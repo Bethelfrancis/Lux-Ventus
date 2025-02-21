@@ -110,44 +110,28 @@ const Navbar = () => {
                 
         </div>
 
-            {/* <div 
-                className={`animi hidden lg:block absolute right-3 bg-gren p-5 rounded-full z-40`}
-                onClick={handleToggle}
-            >
-                <span className={`animi block w-4 h-[2px] rounded-md absolute right-2.5 ${
-                    isOpen ? 'bg-transparent' : 'bg-black'
-                }`}>
-                <span className={`animi absolute -top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
-                    isOpen ? '-rotate-45 top-0' : 'rotate-0'
-                }`}></span>
-                <span className={`animi absolute top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
-                    isOpen ? 'rotate-45 -top-0' : 'rotate-0'
-                }`}></span>
-                </span>
-            </div> */}
-
-            <motion.div 
-                className={`animi hidden lg:block absolute right-3 bg-gren p-5 rounded-full z-40`}
-                initial= 'hidden'
-                animate="visible"
-                variants={{
-                    hidden: { opacity: 0, x: 200},
-                    visible: { opacity: 1, x: 0 }
-                }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                onClick={handleToggle}
-            >
-                <span className={`animi block w-4 h-[2px] rounded-md absolute right-2.5 ${
-                    isOpen ? 'bg-transparent' : 'bg-black'
-                }`}>
-                <span className={`animi absolute -top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
-                    isOpen ? '-rotate-45 top-[0px]' : 'rotate-0'
-                }`}></span>
-                <span className={`animi absolute top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
-                    isOpen ? 'rotate-45 -top-[1.2px]' : 'rotate-0'
-                }`}></span>
-                </span>
-            </motion.div>
+        <motion.div 
+            className={`animi hidden lg:block absolute right-3 bg-gren p-5 rounded-full z-40`}
+            initial= 'hidden'
+            animate="visible"
+            variants={{
+                hidden: { opacity: 0, x: 200},
+                visible: { opacity: 1, x: 0 }
+            }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            onClick={handleToggle}
+        >
+            <span className={`animi block w-4 h-[2px] rounded-md absolute right-2.5 ${
+                isOpen ? 'bg-transparent' : 'bg-black'
+            }`}>
+            <span className={`animi absolute -top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
+                isOpen ? '-rotate-45 -top-[1px]' : 'rotate-0'
+            }`}></span>
+            <span className={`animi absolute top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
+                isOpen ? 'rotate-45 -top-[1.3px]' : 'rotate-0'
+            }`}></span>
+            </span>
+        </motion.div>
 
         </motion.div>
     );

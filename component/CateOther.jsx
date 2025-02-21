@@ -74,7 +74,7 @@ const CategoryBlog = ({ data , loading, error }) => {
                                         className="w-12 rounded-full" 
                                     />
         
-                                    <p className="text-black text-opacity-55 font-semibold">
+                                    <p className="text-black text-opacity-55 font-semibold xs:hidden">
                                             {
                                                 blog.author.length > 10
                                                     ? `${blog.author.slice(0, 10)}...`
