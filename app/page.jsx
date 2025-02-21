@@ -13,7 +13,7 @@ import Footer from "@/component/Footer";
 
 const Home = () => {
   const url = 'https://lux-ventus-api.onrender.com/blogs';
-  const { data, loading, error } = useFetch(url)
+  const { data, loading, error } = useFetch(url) 
 
   return (
     <div>
