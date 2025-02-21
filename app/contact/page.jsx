@@ -51,8 +51,8 @@ const Contact = () => {
                                     whileInView="visible"
                                     viewport={{ once: true, amount: 0.2 }}
                                     variants={{
-                                        hidden: { opacity: 0, x: 75 },
-                                        visible: { opacity: 1, x: 0 }
+                                        hidden: { opacity: 0, y: 75 },
+                                        visible: { opacity: 1, y: 0 }
                                     }}
                                     transition={{ duration: 0.8, delay: 1 }}
                                 >
