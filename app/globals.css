@@ -1,21 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.animi {
+    @apply duration-700 transition-all ease-in-out
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.side-bar {
+    @apply flex flex-col items-center bg-white rounded-xl shadow-lg px-6 py-4
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.side-bar-left {
+    @apply flex flex-col items-start bg-white rounded-xl shadow-lg px-6 py-4
 }
