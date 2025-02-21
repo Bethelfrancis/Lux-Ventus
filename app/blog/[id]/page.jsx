@@ -14,10 +14,10 @@ const BlogDetails = () => {
     const { id } = useParams();
     const [refresh, setRefresh] = useState(false);
 
-    const url = `http://localhost:4000/blogs/${id}?refresh=${refresh}`;
+    const url = `https://lux-ventus-api.onrender.com/blogs/${id}?refresh=${refresh}`;
     const { data: blog, loading, error } = useFetch(url);
 
-    const urls = `http://localhost:4000/blogs`;
+    const urls = `https://lux-ventus-api.onrender.com/blogs`;
     const { data } = useFetch(urls);
 
     if (error) return <p>Error loading data</p>;

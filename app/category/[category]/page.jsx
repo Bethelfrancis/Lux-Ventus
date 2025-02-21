@@ -12,7 +12,7 @@ import CategoryBlog from "@/component/CateOther";
 const Category = () => {
     const { category } = useParams();
 
-    const url = `http://localhost:4000/blogs`;
+    const url = `https://lux-ventus-api.onrender.com/blogs`;
     const { data, loading, error } = useFetch(url);
 
     const filteredData = data.filter(article => article.category.toLowerCase() === category.toLowerCase())

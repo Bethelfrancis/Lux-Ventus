@@ -13,7 +13,7 @@ const CreateBlog = () => {
     const [ isPending, setIsPending ] = useState(false)
 
     const router = useRouter()
-    const url = 'http://localhost:4000/blogs'
+    const url = 'https://lux-ventus-api.onrender.com/blogs'
     const uploadUrl = "/api/upload"
 
     const formatDate = (date) => {

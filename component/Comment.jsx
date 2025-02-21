@@ -18,14 +18,14 @@ const Comment = ({ blogId, onCommentPosted }) => {
         };
     
         try {
-            const response = await fetch(`http://localhost:4000/blogs/${blogId}`);
+            const response = await fetch(`https://lux-ventus-api.onrender.com/blogs/${blogId}`);
             if (!response.ok) throw new Error("Failed to fetch blog post");
     
             const blog = await response.json();
 
             const updatedComments = [...blog.comment, newComment];
 
-            const updateResponse = await fetch(`http://localhost:4000/blogs/${blogId}`, {
+            const updateResponse = await fetch(`https://lux-ventus-api.onrender.com/blogs/${blogId}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

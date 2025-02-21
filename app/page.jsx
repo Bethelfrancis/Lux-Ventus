@@ -12,7 +12,7 @@ import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
 
 const Home = () => {
-  const url = 'http://localhost:4000/blogs';
+  const url = 'https://lux-ventus-api.onrender.com/blogs';
   const { data, loading, error } = useFetch(url)
 
   return (
