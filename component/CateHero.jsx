@@ -4,13 +4,6 @@ const CategoryHero = ({ activeCategory }) => {
     return (
         <div 
             className="relative flex items-end py-10"
-            initial= 'hidden'
-            animate="visible"
-            variants={{
-                hidden: { opacity: 0,  scale: 0 },
-                visible: { opacity: 1,  scale: '100%' }
-            }}
-            transition={{ duration: 0.8, delay: 2, }}
         >
 
             <motion.img 

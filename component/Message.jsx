@@ -1,5 +1,4 @@
 "use client"
-import { motion } from "framer-motion"
 import { useState } from "react"
 
 const Message = () => {
@@ -18,7 +17,7 @@ const Message = () => {
     }
 
     return (
-        <motion.form 
+        <form 
             className="flex flex-col justify-start lg:justify-center w-full bg-white rounded-2xl shadow-lg px-6 xs:px-3 py-16 mb-12"
             onSubmit={handleSubmit}
             initial= 'hidden'
@@ -100,7 +99,7 @@ const Message = () => {
                 SEND
             </button>
 
-        </motion.form>
+        </form>
     );
 }
  
