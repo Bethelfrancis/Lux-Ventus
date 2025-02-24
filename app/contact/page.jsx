@@ -33,7 +33,7 @@ const Contact = () => {
                 
                 <ContactHero />
 
-                <div className="flex lg:flex-col lg:gap-y-5 justify-between mt-10 w-full">
+                <div className="flex lg:flex-col lg:gap-y-5 justify-between w-full">
                     
                     <div className="w-[68%] lg:w-full">
                         <Message />
