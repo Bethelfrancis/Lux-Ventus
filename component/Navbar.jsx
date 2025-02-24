@@ -112,7 +112,7 @@ const Navbar = () => {
         </div>
 
         <motion.div 
-            className={`animi hidden lg:block absolute right-3 bg-gren p-5 rounded-full z-40`}
+            className='animi space-y-1 absolute hidden right-3 bg-gren p-2.5 rounded-full z-40 lg:flex flex-col items-end' 
             initial= 'hidden'
             animate="visible"
             variants={{
@@ -122,16 +122,9 @@ const Navbar = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             onClick={handleToggle}
         >
-            <span className={`animi block w-4 h-[2px] rounded-md absolute right-2.5 ${
-                isOpen ? '-rotate-45 -top-[0]' : 'rotate-0'
-            }`}>
-            <span className={`animi absolute -top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
-                isOpen ? 'bg-transparent' : 'bg-black'
-            }`}></span>
-            <span className={`animi absolute top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
-                isOpen ? 'rotate-45 -top-[0px]' : 'rotate-0'
-            }`}></span>
-            </span>
+            <span className={`animi block w-5 h-[2px] bg-black rounded-md ${isOpen ? 'rotate-[45deg] translate-y-2' : ''}`}></span>
+            <span className={`animi block w-4 h-[2px] bg-black rounded-md ${isOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`animi block w-5 h-[2px] bg-black rounded-md ${isOpen ? '-rotate-[45deg] -translate-y-[5px]' : ''}`}></span>
         </motion.div>
 
         </motion.div>
