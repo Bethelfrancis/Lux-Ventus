@@ -3,7 +3,6 @@ import ContactHero from "@/component/ConHero";
 import Footer from "@/component/Footer";
 import Message from "@/component/Message";
 import Navbar from "@/component/Navbar";
-import { motion } from "framer-motion";
 
 const Contact = () => {
     const address = [
@@ -34,7 +33,7 @@ const Contact = () => {
                 
                 <ContactHero />
 
-                <div className="flex lg:flex-col lg:gap-y-5 justify-between w-full">
+                <div className="flex lg:flex-col lg:gap-y-5 justify-between mt-10 w-full">
                     
                     <div className="w-[68%] lg:w-full">
                         <Message />
@@ -44,7 +43,7 @@ const Contact = () => {
 
                         {
                             address.map((add, index) => (
-                                <motion.div 
+                                <div 
                                     key={index}
                                     className="flex items-start justify-start gap-x-10 bg-white rounded-xl shadow-lg px-10 py-6"
                                     initial= 'hidden'
@@ -74,7 +73,7 @@ const Contact = () => {
                                         </p>
                                     </div>
 
-                                </motion.div>
+                                </div>
                             ))
                         }
 
