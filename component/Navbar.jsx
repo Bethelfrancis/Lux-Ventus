@@ -124,11 +124,11 @@ const Navbar = () => {
             <span className={`animi block w-4 h-[2px] rounded-md absolute right-2.5 ${
                 isOpen ? 'bg-transparent' : 'bg-black'
             }`}>
-            {/* <span className={`animi absolute -top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
+            <span className={`animi absolute -top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
                 isOpen ? '-rotate-45 -top-[0]' : 'rotate-0'
-            }`}></span> */}
+            }`}></span>
             <span className={`animi absolute top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
-                isOpen ? 'rotate-45 -top-[0]' : 'rotate-0'
+                isOpen ? 'rotate-45 -top-[1px]' : 'rotate-0'
             }`}></span>
             </span>
         </motion.div>
