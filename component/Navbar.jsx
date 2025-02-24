@@ -96,6 +96,7 @@ const Navbar = () => {
             <Link href='/contact'>
                 <motion.button
                     className='px-6 py-1.5 font-semibold rounded-full bg-gren cursor-pointer hover:shadow-xl animi'
+                    onClick={handleToggle}
                     initial= 'hidden'
                     animate="visible"
                     variants={{
@@ -122,13 +123,13 @@ const Navbar = () => {
             onClick={handleToggle}
         >
             <span className={`animi block w-4 h-[2px] rounded-md absolute right-2.5 ${
-                isOpen ? 'bg-transparent' : 'bg-black'
+                isOpen ? '-rotate-45 -top-[0]' : 'rotate-0'
             }`}>
             <span className={`animi absolute -top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
-                isOpen ? '-rotate-45 -top-[0]' : 'rotate-0'
+                isOpen ? 'bg-transparent' : 'bg-black'
             }`}></span>
             <span className={`animi absolute top-[6px] bg-black w-5 h-[2px] rounded-md right-0 ${
-                isOpen ? 'rotate-45 -top-[1px]' : 'rotate-0'
+                isOpen ? 'rotate-45 -top-[0px]' : 'rotate-0'
             }`}></span>
             </span>
         </motion.div>
