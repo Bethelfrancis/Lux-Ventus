@@ -2,14 +2,18 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import useFetch from "@/hook/useFecth";
 
-const CategoryBlog = ({ data , loading, error }) => {
+const CategoryBlog = () => {
+    const url = 'https://lux-ventus-api.onrender.com/blogs';
+    const { data, loading, error } = useFetch(url) 
+
     const [ currentPage, setCurrentPage ] = useState(1)
     const itemsPerPage = 4;
 
-    const nextProduct = currentPage * itemsPerPage
-    const firstPage = nextProduct - itemsPerPage
-    const currentProducts = data.slice(firstPage, nextProduct)
+    const nextPage = currentPage * itemsPerPage
+    const firstPage = nextPage - itemsPerPage
+    const currentPages = data.slice(firstPage, nextPage)
 
     const totalPages = Math.ceil(data.length / itemsPerPage)
 
@@ -36,7 +40,7 @@ const CategoryBlog = ({ data , loading, error }) => {
         <div className="flex flex-col mt-5 mb-16 w-full">
 
             {
-                currentProducts.map(blog => (
+                currentPages.map(blog => (
                     <motion.div 
                         key={blog.id}
                         className="relative flex lp:flex-col bg-white w-full mb-10 shadow-lg rounded-xl h-other lp:h-full min-h-other"
@@ -123,7 +127,7 @@ const CategoryBlog = ({ data , loading, error }) => {
                 ))
             }
 
-            {currentProducts.length > 0 && (
+            {currentPages.length > 0 && (
                 <div className="flex justify-between items-center lg:ml-3 ml-6 mt-4">
                     <div 
                         className={`flex items-center justify-center border rounded-lg p-2 gap-3 hover:shadow-lg animi

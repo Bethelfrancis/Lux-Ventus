@@ -24,7 +24,7 @@ const BlogDetails = () => {
     if (!blog) return <p>Blog not found</p>;
 
     return (
-        <div>
+        <div className='overflow-x-hidden'>
 
             {loading ? (
                 <div className="bg-white flex justify-center items-center h-screen w-full">

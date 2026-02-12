@@ -16,7 +16,7 @@ const Home = () => {
   const { data, loading, error } = useFetch(url) 
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
 
       <Navbar />
 

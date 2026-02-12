@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import useFetch from "@/hook/useFecth";
 
-const SingePost = ({ data, loading, error }) => {
+const SingePost = () => {
+    const url = 'https://lux-ventus-api.onrender.com/blogs';
+    const { data, loading, error } = useFetch(url) 
+
     const shuffledNews = [...data].sort(() => 0.5 - Math.random())
     const randomNews = shuffledNews.slice(0, 1);
 
